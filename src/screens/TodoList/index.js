@@ -7,15 +7,30 @@ const TodoList = () => {
   const [list, setList] = useState([]);
 
   return (
-    <View>
+    <View style={{flex: 1, backgroundColor: 'lightgrey'}}>
       <InputWithButton
         onPress={input => {
-          if (input && input?.length > 0) {
-            setList(prevList => [...prevList, input]);
+          if (
+            input &&
+            input?.length > 0 &&
+            list.findIndex(item => item.value === input) === -1
+          ) {
+            setList(prevList => [...prevList, {value: input, done: false}]);
           }
         }}
       />
-      <List list={list} />
+      <List
+        list={list}
+        updateItem={item => {
+          let newList = [...list];
+          newList.forEach(listItem => {
+            if (item.value === listItem.value) {
+              listItem.done = item.done;
+            }
+          });
+          setList(newList);
+        }}
+      />
     </View>
   );
 };

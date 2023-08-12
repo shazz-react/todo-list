@@ -3,15 +3,27 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   text: {
     fontSize: 20,
+    marginLeft: 10,
+  },
+  textDone: {
+    fontSize: 20,
+    marginLeft: 10,
+    textDecorationLine: 'line-through',
+    textDecorationColor: 'red',
   },
   listItem: {
     height: 50,
-    backgroundColor: 'grey',
     borderRadius: 10,
-    paddingHorizontal: 15,
     marginHorizontal: 30,
     marginTop: 10,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  seperator: {
+    height: 1,
+    marginHorizontal: 20,
+    backgroundColor: 'grey',
   },
 });
 

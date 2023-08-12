@@ -14,7 +14,7 @@ import TodoList from './src/screens/TodoList';
 const App = () => {
 
   return (
-    <SafeAreaView style={{flex:1}}>
+    <SafeAreaView style={{flex:1, backgroundColor: 'lightgrey'}}>
       <TodoList/>
     </SafeAreaView>
   );

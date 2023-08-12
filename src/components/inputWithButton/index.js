@@ -9,6 +9,7 @@ const InputWithButton = ({onPress}) => {
     <View style={styles.main}>
       <TextInput
         style={styles.input}
+        selectionColor="black"
         onChangeText={text => {
           inputRef.current = text;
         }}
@@ -16,9 +17,9 @@ const InputWithButton = ({onPress}) => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          onPress(inputRef.current);
+          onPress(inputRef.current.trim());
         }}>
-        <Text>Add</Text>
+        <Text style={{fontSize: 30, color: 'black'}}>+</Text>
       </TouchableOpacity>
     </View>
   );
