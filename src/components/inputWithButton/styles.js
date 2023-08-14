@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   main: {
     marginTop: 20,
     height: 40,
-    marginHorizontal: 30,
+    marginHorizontal: 16,
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,

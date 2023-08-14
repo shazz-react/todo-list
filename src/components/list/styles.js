@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   listItem: {
     height: 50,
     borderRadius: 10,
-    marginHorizontal: 30,
+    marginHorizontal: 16,
     marginTop: 10,
     justifyContent: 'flex-start',
     alignItems: 'center',
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   seperator: {
     height: 1,
-    marginHorizontal: 20,
+    marginHorizontal: 16,
     backgroundColor: 'grey',
   },
 });

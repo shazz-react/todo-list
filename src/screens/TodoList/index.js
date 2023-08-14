@@ -8,17 +8,6 @@ const TodoList = () => {
 
   return (
     <View style={{flex: 1, backgroundColor: 'lightgrey'}}>
-      <InputWithButton
-        onPress={input => {
-          if (
-            input &&
-            input?.length > 0 &&
-            list.findIndex(item => item.value === input) === -1
-          ) {
-            setList(prevList => [...prevList, {value: input, done: false}]);
-          }
-        }}
-      />
       <List
         list={list}
         updateItem={item => {
@@ -29,6 +18,17 @@ const TodoList = () => {
             }
           });
           setList(newList);
+        }}
+      />
+      <InputWithButton
+        onPress={input => {
+          if (
+            input &&
+            input?.length > 0 &&
+            list.findIndex(item => item.value === input) === -1
+          ) {
+            setList(prevList => [...prevList, {value: input, done: false}]);
+          }
         }}
       />
     </View>
