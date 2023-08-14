@@ -19,7 +19,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Install CI
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Run Unit Tests
         run: npm test -- -u
@@ -35,7 +35,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Install CI
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Run ESLint
         run: npm run lint
