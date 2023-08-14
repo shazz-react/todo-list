@@ -1,3 +1,4 @@
+import React from 'react';
 import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 
@@ -9,12 +10,7 @@ const List = ({list, updateItem}) => (
         <View>
           <View style={styles.listItem}>
             <TouchableOpacity
-              style={{
-                height: 30,
-                width: 30,
-                borderRadius: 5,
-                backgroundColor: 'black',
-              }}
+              style={styles.check}
               onPress={() => {
                 updateItem({...item, done: !item.done});
               }}

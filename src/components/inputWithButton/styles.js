@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  text: {
+    fontSize: 30,
+    color: 'black',
+  },
 });
 
 export default styles;

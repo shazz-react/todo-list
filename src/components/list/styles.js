@@ -25,6 +25,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     backgroundColor: 'grey',
   },
+  check: {
+    height: 30,
+    width: 30,
+    borderRadius: 5,
+    backgroundColor: 'black',
+  },
 });
 
 export default styles;

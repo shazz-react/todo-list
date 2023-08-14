@@ -6,18 +6,15 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import TodoList from './src/screens/TodoList';
 
 const App = () => {
-
   return (
-    <SafeAreaView style={{flex:1, backgroundColor: 'lightgrey'}}>
-      <TodoList/>
+    <SafeAreaView style={{flex: 1, backgroundColor: 'lightgrey'}}>
+      <TodoList />
     </SafeAreaView>
   );
-}
+};
 
 export default App;

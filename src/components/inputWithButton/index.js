@@ -1,3 +1,4 @@
+import React from 'react';
 import {Text, TextInput, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 import {useRef} from 'react';
@@ -19,7 +20,7 @@ const InputWithButton = ({onPress}) => {
         onPress={() => {
           onPress(inputRef.current.trim());
         }}>
-        <Text style={{fontSize: 30, color: 'black'}}>+</Text>
+        <Text style={styles.text}>+</Text>
       </TouchableOpacity>
     </View>
   );

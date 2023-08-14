@@ -1,13 +1,14 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {View} from 'react-native';
 import InputWithButton from '../../components/inputWithButton';
 import List from '../../components/list';
+import styles from './styles';
 
 const TodoList = () => {
   const [list, setList] = useState([]);
 
   return (
-    <View style={{flex: 1, backgroundColor: 'lightgrey'}}>
+    <View style={styles.main}>
       <List
         list={list}
         updateItem={item => {
