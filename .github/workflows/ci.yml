@@ -15,11 +15,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Install CI
         run: npm ci
 
       - name: Run Unit Tests
-        run: npm test
+        run: npm test -- -u
 
   eslint:
     name: ESLint
@@ -27,6 +30,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Install CI
         run: npm ci
