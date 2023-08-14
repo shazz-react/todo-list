@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View} from 'react-native';
 import InputWithButton from '../../components/inputWithButton';
 import List from '../../components/list';
 import styles from './styles';
 
 const TodoList = () => {
-  const [list, setList] = useState([]);
+  const [list, setList] = React.useState([]);
 
   return (
     <View style={styles.main}>
@@ -24,7 +24,6 @@ const TodoList = () => {
       <InputWithButton
         onPress={input => {
           if (
-            input &&
             input?.length > 0 &&
             list.findIndex(item => item.value === input) === -1
           ) {

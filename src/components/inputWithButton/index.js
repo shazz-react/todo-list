@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Text, TextInput, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
-import {useRef} from 'react';
 
 const InputWithButton = ({onPress}) => {
   const inputRef = useRef(null);

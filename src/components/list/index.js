@@ -1,29 +1,13 @@
 import React from 'react';
-import {FlatList, Text, TouchableOpacity, View} from 'react-native';
-import styles from './styles';
+import {FlatList} from 'react-native';
+import ListItem from './listItem';
 
-const List = ({list, updateItem}) => (
-  <FlatList
-    data={list}
-    renderItem={({item}) => {
-      return (
-        <View>
-          <View style={styles.listItem}>
-            <TouchableOpacity
-              style={styles.check}
-              onPress={() => {
-                updateItem({...item, done: !item.done});
-              }}
-            />
-            <Text style={item.done ? styles.textDone : styles.text}>
-              {item?.value}
-            </Text>
-          </View>
-          <View style={styles.seperator} />
-        </View>
-      );
-    }}
-  />
-);
+const List = ({list, updateItem}) => {
+  const renderItem = ({item}) => (
+    <ListItem item={item} updateItem={updateItem} />
+  );
+
+  return <FlatList data={list} renderItem={renderItem} />;
+};
 
 export default List;
