@@ -4,7 +4,7 @@ import {Icon} from '@rneui/themed';
 import {ListItemProps} from '../../../types';
 import styles from './styles';
 
-const ListItem = ({item, updateItem}: ListItemProps): JSX.Element => (
+const ListItem = ({item, updateItem}: ListItemProps): React.JSX.Element => (
   <View>
     <View style={styles.listItem}>
       <TouchableOpacity

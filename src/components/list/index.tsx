@@ -3,7 +3,7 @@ import {FlatList, ListRenderItem} from 'react-native';
 import ListItem from './listItem';
 import {TodoItem, ListProps} from '../../types';
 
-const List = ({list, updateItem}: ListProps): JSX.Element => {
+const List = ({list, updateItem}: ListProps): React.JSX.Element => {
   const renderItem: ListRenderItem<TodoItem> = ({item}) => (
     <ListItem item={item} updateItem={updateItem} />
   );

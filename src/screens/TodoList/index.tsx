@@ -5,7 +5,7 @@ import List from '../../components/list';
 import {TodoItem} from '../../types';
 import styles from './styles';
 
-const TodoList = (): JSX.Element => {
+const TodoList = (): React.JSX.Element => {
   const [list, setList] = React.useState<TodoItem[]>([]);
 
   return (
