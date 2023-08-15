@@ -2,10 +2,13 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   text: {
+    flex: 1,
     fontSize: 20,
     marginLeft: 10,
+    marginRight: 16,
   },
   textDone: {
+    flex: 1,
     fontSize: 20,
     marginLeft: 10,
     textDecorationLine: 'line-through',
@@ -14,7 +17,7 @@ const styles = StyleSheet.create({
   listItem: {
     height: 50,
     borderRadius: 10,
-    marginHorizontal: 16,
+    paddingHorizontal: 16,
     marginTop: 10,
     justifyContent: 'flex-start',
     alignItems: 'center',
@@ -24,12 +27,6 @@ const styles = StyleSheet.create({
     height: 1,
     marginHorizontal: 16,
     backgroundColor: 'grey',
-  },
-  check: {
-    height: 30,
-    width: 30,
-    borderRadius: 5,
-    backgroundColor: 'black',
   },
 });
 
