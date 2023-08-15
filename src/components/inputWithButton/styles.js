@@ -16,6 +16,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingHorizontal: 15,
     fontSize: 20,
+    shadowColor: 'black',
+    shadowOffset: {width: 2, height: 4},
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
   },
   button: {
     marginLeft: 10,
@@ -25,6 +29,10 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
+    shadowColor: 'black',
+    shadowOffset: {width: 2, height: 4},
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
   },
   text: {
     fontSize: 30,
