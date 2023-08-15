@@ -1,9 +1,10 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import {Icon} from '@rneui/themed';
+import {ListItemProps} from '../../../types';
 import styles from './styles';
 
-const ListItem = ({item, updateItem}) => (
+const ListItem = ({item, updateItem}: ListItemProps): JSX.Element => (
   <View>
     <View style={styles.listItem}>
       <TouchableOpacity
