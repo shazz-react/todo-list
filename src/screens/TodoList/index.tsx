@@ -2,18 +2,19 @@ import React from 'react';
 import {View} from 'react-native';
 import InputWithButton from '../../components/inputWithButton';
 import List from '../../components/list';
+import {TodoItem} from '../../types';
 import styles from './styles';
 
-const TodoList = () => {
-  const [list, setList] = React.useState([]);
+const TodoList = (): JSX.Element => {
+  const [list, setList] = React.useState<TodoItem[]>([]);
 
   return (
     <View style={styles.main}>
       <List
         list={list}
-        updateItem={item => {
+        updateItem={(item: TodoItem) => {
           let newList = [...list];
-          newList.forEach(listItem => {
+          newList.forEach((listItem: TodoItem) => {
             if (item.value === listItem.value) {
               listItem.done = item.done;
             }
@@ -22,12 +23,13 @@ const TodoList = () => {
         }}
       />
       <InputWithButton
-        onPress={input => {
+        onPress={(input: string) => {
           if (
             input?.length > 0 &&
-            list.findIndex(item => item.value === input) === -1
+            list.findIndex((item: TodoItem) => item.value === input) === -1
           ) {
-            setList(prevList => [...prevList, {value: input, done: false}]);
+            const newItem: TodoItem = {value: input, done: false};
+            setList(prevList => [...prevList, newItem]);
           }
         }}
       />

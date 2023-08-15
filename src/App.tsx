@@ -7,10 +7,10 @@
 
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import TodoList from './src/screens/TodoList';
+import TodoList from './screens/TodoList';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{flex: 1, backgroundColor: 'lightgrey'}}>
