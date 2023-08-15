@@ -9,6 +9,7 @@ const InputWithButton = ({onPress}) => {
     <View style={styles.main}>
       <TextInput
         style={styles.input}
+        placeholder="Enter your task here"
         selectionColor="black"
         onChangeText={text => {
           inputRef.current = text;
