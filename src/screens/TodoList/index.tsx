@@ -13,11 +13,17 @@ const TodoList = (): React.JSX.Element => {
       <List
         list={list}
         updateItem={(item: TodoItem) => {
-          let newList = [...list];
-          newList.forEach((listItem: TodoItem) => {
+          let newList = list.map((listItem: TodoItem) => {
             if (item.value === listItem.value) {
-              listItem.done = item.done;
+              listItem.done = !item.done;
             }
+            return listItem;
+          });
+          setList(newList);
+        }}
+        deleteItem={(item: TodoItem) => {
+          let newList = list.filter((listItem: TodoItem) => {
+            return item.value !== listItem.value;
           });
           setList(newList);
         }}

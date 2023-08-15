@@ -33,6 +33,7 @@ describe('To DO List test', () => {
 
     let list = wrapper.find(List);
     list.renderProp('updateItem')(itemData);
+    list.renderProp('deleteItem')(itemData);
 
     let button = wrapper.find(Button);
     button.renderProp('onPress')('test 2');
