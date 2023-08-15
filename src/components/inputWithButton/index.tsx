@@ -3,7 +3,9 @@ import {Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {InputWithButtonProps} from '../../types';
 import styles from './styles';
 
-const InputWithButton = ({onPress}: InputWithButtonProps) => {
+const InputWithButton = ({
+  onPress,
+}: InputWithButtonProps): React.JSX.Element => {
   const inputRef = useRef<string>('');
 
   return (
